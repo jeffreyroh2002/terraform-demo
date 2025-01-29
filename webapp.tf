@@ -99,7 +99,7 @@ resource "aws_network_interface" "web-server-nic" {
   security_groups = [aws_security_group.allow_web.id]
 
 }
-# 8. Assign an elastic IP to the network interface created in step 7
+# 8. Assign an elastic IP to the network interface
 
 resource "aws_eip" "one" {
   network_interface         = aws_network_interface.web-server-nic.id
